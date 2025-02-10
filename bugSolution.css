@@ -1,0 +1,7 @@
+To fix this, ensure the calculation is structured to perform the percentage calculation before the subtraction. This can often be done by wrapping the percentage calculation in parentheses:
+
+```css
+width: calc((50% ) - 10px);
+```
+
+By explicitly grouping the `50%` calculation, we force the browser to compute it first, leading to the correct result.  This prioritization avoids misinterpretations and ensures predictable behavior regardless of the parent element's dimensions.
